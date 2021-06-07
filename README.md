@@ -15,7 +15,7 @@ Notre but est de détecter le plan et de plannifier une trajectoire afin de fair
 ### Installing
 
 * recopier et écraser le dossier fmauch_universal_robot dans le dossier du driver installé précedemment 
-* recopier les dossier trajectory / detection / simulation 
+* recopier les dossiers trajectory / detection / simulation 
 * pour la simulation recopier le dossier Qr dans ./gazebo/models/
 ### Executing program
 
@@ -39,11 +39,11 @@ lancer le service
 ```
 rosrun trajectory server.py
 ```
-lancer le programme qui permet de se mettre à la position Initial
+lancer le programme qui permet de se mettre à la position Initiale
 ```
 rosrun trajectory move.py
 ```
-bien placer le aruco, lancer la detection (il faut faire la calibation au préalable)
+bien placer le aruco, lancer la detection
 ```
 rosrun detection detection.py
 ```
@@ -66,16 +66,16 @@ lancer gazebo
 ```
 roslaunch ur_e_gazebo ur3e.launch limited:=true
 ```
-lancer moveit (changer eventuellement le fichier controllers dans fmauch_universal_robot/ur3_e_moveit_config/config )
-pour la simulation mettre : /follow_joint_trajectory
+lancer moveit (modifier éventuellement le fichier "controllers" dans fmauch_universal_robot/ur3_e_moveit_config/config )
+pour la simulation : /follow_joint_trajectory
 pour le robot réel :scaled_pos_joint_traj_controller//follow_joint_trajectory
 
 ```
 roslaunch ur3_e_moveit_config ur3_e_moveit_planning_execution.launch sim:=true limited:=true
 ```
-lancer rviz comme précedemment 
+lancer rviz  
 
-ca permet de publier un repere aruco fixe
+publier un repere aruco fixe
 ```
 rosrun simulation fixe.py
 ```
