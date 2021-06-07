@@ -1,7 +1,5 @@
 # Programmation de la trajectoire de l'UR
 
-Simple overview of use/purpose.
-
 ## Description
 
 Notre but est de détecter le plan et de plannifier une trajectoire afin de faire une dépose
@@ -23,7 +21,7 @@ Notre but est de détecter le plan et de plannifier une trajectoire afin de fair
 
 * manipuler le robot réel
 
-Veuillez suivre le manuel fourni dans le dossier afin d'établir et de configuration de l'adresse IP 
+Veuillez suivre le manuel fourni dans le dossier afin d'établir et de configurer l'adresse IP 
 faire la calibration du robot au préalable  
 ```
 roslaunch ur_robot_driver ur3e_bringup.launch robot_ip:=192.168.56.2 kinematics_config:="${HOME}/my_robot_calibration.yaml"
@@ -61,7 +59,7 @@ rosrun trajectory client.py
 ```
 
 
-*pour la simulation gazebo 
+* pour la simulation gazebo 
 changer éventullement l'URDF selon le type de robot afin d'ajouter la camera "http://gazebosim.org/tutorials?tut=ros_gzplugins"
 
 lancer gazebo 
